@@ -1,0 +1,2 @@
+Gender,Married,Dependents,Education,CoapplicantIncome,LoanAmount,Credit_History,Property_Area,Prediction
+Male,Yes,0,Graduate,0.0,0.0,1.0,Urban,Approved
