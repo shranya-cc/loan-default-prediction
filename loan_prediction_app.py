@@ -7,30 +7,34 @@ import os
 warnings.filterwarnings('ignore')
 file_path = 'saved_inputs.csv'
 
-#Loading trained pipeline model
+# Load trained pipeline model (with preprocessing inside)
 model = joblib.load("loan_prediction_pipeline.pkl")
 
 st.title("Loan Approval Prediction App")
 
-#Showing the model info
+# Showing the model info
 st.subheader('Model Info')
 st.markdown('**Model Type:** Logistic Regression (GridSearchCV Tuned)')
+<<<<<<< HEAD
 accuracy = 0.80  
+=======
+accuracy = 0.80  # Replace with actual test accuracy if available
+>>>>>>> 523f178 (Re-added app, pipeline, and compatibility script files)
 st.markdown(f'**Test Accuracy:** `{accuracy * 100:.2f}%`')
 
 st.markdown("---")
 
-#Collecting the user inputs
+# Collecting the user inputs
 gender = st.selectbox('Gender', ['Male', 'Female'])
 married = st.selectbox('Married', ['Yes', 'No'])
 dependents = st.selectbox('Dependents', ['0', '1', '2', '3+'])
 education = st.selectbox('Education', ['Graduate', 'Not Graduate'])
-coapp_income = st.number_input('Coapplicant Income', min_value= 0.0)
-loan_amount = st.number_input('Loan Amount', min_value = 0.0)
+coapp_income = st.number_input('Coapplicant Income', min_value=0.0)
+loan_amount = st.number_input('Loan Amount', min_value=0.0)
 credit_history = st.selectbox('Credit History', ['Yes', 'No'])
 property_area = st.selectbox('Property Area', ['Urban', 'Semiurban', 'Rural'])
 
-#Preparing the input DataFrame
+# Preparing the input DataFrame
 input_df = pd.DataFrame([{
     'Gender': gender,
     'Married': married,
@@ -42,18 +46,24 @@ input_df = pd.DataFrame([{
     'Property_Area': property_area
 }])
 
-#Predicting and displaying the result
+# Debug: Show the actual input being fed to the model
+st.subheader("Input Preview (Before Prediction)")
+st.dataframe(input_df)
+
+# Predicting and displaying the result
 if st.button('Predict Loan Approval'):
-    prediction = model.predict(input_df)[0]
+    try:
+        prediction = model.predict(input_df)[0]
+        proba = model.predict_proba(input_df)[0][1]  # Probability of being Approved
 
-    #Prediction with result
-    if prediction == 1:
-        st.success('Loan is likely to be Approved!')
-        prediction_result = 'Approved'
-    else:
-        st.warning('Loan is likely to be Rejected.')
-        prediction_result = 'Rejected'
+        if prediction == 1:
+            st.success('Loan is likely to be Approved!')
+            prediction_result = 'Approved'
+        else:
+            st.warning('Loan is likely to be Rejected.')
+            prediction_result = 'Rejected'
 
+<<<<<<< HEAD
     #Save inputs + prediction to CSV
     input_df['Prediction'] = prediction_result
     file_path = 'loan_predictions.csv'
@@ -66,5 +76,23 @@ if st.button('Predict Loan Approval'):
     
     updated_data.to_csv(file_path, index = False)
     st.info("Prediction saved to loan_predictions.csv")
+=======
+        # Show probability
+        st.markdown(f"**Approval Confidence:** `{proba * 100:.2f}%`")
+>>>>>>> 523f178 (Re-added app, pipeline, and compatibility script files)
 
+        # Save input + result
+        input_df['Prediction'] = prediction_result
+        file_path = 'loan_predictions.csv'
 
+        if os.path.exists(file_path):
+            past_data = pd.read_csv(file_path)
+            updated_data = pd.concat([past_data, input_df], ignore_index=True)
+        else:
+            updated_data = input_df
+
+        updated_data.to_csv(file_path, index=False)
+        st.info("Prediction saved to loan_predictions.csv")
+
+    except Exception as e:
+        st.error(f"Something went wrong: {e}")
