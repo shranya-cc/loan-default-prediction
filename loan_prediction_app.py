@@ -14,12 +14,8 @@ st.title("Loan Approval Prediction App")
 
 # Showing the model info
 st.subheader('Model Info')
-st.markdown('**Model Type:** Logistic Regression (GridSearchCV Tuned)')
-<<<<<<< HEAD
-accuracy = 0.80  
-=======
 accuracy = 0.80  # Replace with actual test accuracy if available
->>>>>>> 523f178 (Re-added app, pipeline, and compatibility script files)
+st.markdown('**Model Type:** Logistic Regression (GridSearchCV Tuned)')
 st.markdown(f'**Test Accuracy:** `{accuracy * 100:.2f}%`')
 
 st.markdown("---")
@@ -63,23 +59,8 @@ if st.button('Predict Loan Approval'):
             st.warning('Loan is likely to be Rejected.')
             prediction_result = 'Rejected'
 
-<<<<<<< HEAD
-    #Save inputs + prediction to CSV
-    input_df['Prediction'] = prediction_result
-    file_path = 'loan_predictions.csv'
-    
-    if os.path.exists(file_path):
-        past_data = pd.read_csv(file_path)
-        updated_data = pd.concat([past_data, input_df], ignore_index = True)
-    else:
-        updated_data = input_df
-    
-    updated_data.to_csv(file_path, index = False)
-    st.info("Prediction saved to loan_predictions.csv")
-=======
         # Show probability
         st.markdown(f"**Approval Confidence:** `{proba * 100:.2f}%`")
->>>>>>> 523f178 (Re-added app, pipeline, and compatibility script files)
 
         # Save input + result
         input_df['Prediction'] = prediction_result
