@@ -38,8 +38,8 @@ To assist financial institutions in identifying high-risk loan applicants by:
 
 1. **Clone the repository**
 
-   git clone https://github.com/shranya-cc/loan-default-prediction.git
-   cd loan-default-prediction
+   * git clone https://github.com/shranya-cc/loan-default-prediction.git
+   * cd loan-default-prediction
    
 2. **Install required packages**
    pip install -r reuqirements.txt
