@@ -112,7 +112,7 @@ The dataset used for this project exhibits a significant imbalance in the target
 ## Author ✨
 
 Shranya Dutta
-*Data Analyst in Progress| Machine Learning Enthusiast*
+*Data Analyst in Progress| Machine Learning and Data Analysis Enthusiast*
 
 ## License 
 This project is licensed under the MIT License.
