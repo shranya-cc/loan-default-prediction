@@ -74,18 +74,33 @@ https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-datase
 
 ---
 
-## Limitations Found While Researching about the project!👇`(*>﹏<*)′
+## Limitations Found While Researching about the project! (Data Imbalance and Model Bias)
 
-While substantial effort has been invested in cleaning, preprocessing, modeling, and deploying this project, analysis reveals that the dataset is biased. Key biases include:
+The dataset used for this project exhibits a significant imbalance in the target variable distribution, wit approximately 70% of loans labeled as "Rejected" and only about 30% as "Approved". This imbalance is common in loan approval datasets, as financial institutions tend to reject a majority of applications.
 
-* Gender imbalance (81% Male vs 19% Female)
-* Disproportionate credit history availability (84% have credit history)
-* Potential model favoring of certain demographics due to skewed training data
+~ Impact on Model Performance:
 
-As a result, although the model achieves decent accuracy, it may not be fully fair or generalisable to real-world scenarios.
+* The model tends to predict the majority class ("Rejected") more often, leading to a skewed prediction distribution reflecting the dataset bias.
 
-`A bias analysis notebook will be soon added to document and visualise these imbalances, along with suggestions to mitigate them in future iterations.
+* Despite extensive efforts - including applying techniques such as SMOTE (Synthetic Minority Over-sampling Technique), hyperparameter tuning, different resampling strategies, and cost-effective learning - the imabalance remianed challenging to fully overcome.
 
+* These efforts did not significantly improve the model's ability to accurately identify the minority class ("Approved"), resulting in lower sensitivity and limiting practical usefulness.
+
+* Accuracy alone is not a sufficient metric in this context, so evaluation metrics such as precision, recall, F1-score were considered to better understand model performance.
+
+~ Additional Biases :-
+
+* Gender imbalance (81% Male vs 19% Female) and credit history availability (84% have credit history) may introduce unintended demographic biases in predictions.
+
+* These imbalances suggest the model may favour certain groups over others, which is a critical consideration for fairness and ethical AI.
+
+~ Future Work:
+
+* A dedicated bias analysis notebook will be added soon to visualise these imbalances and document mitigation strategies.
+
+* Exploring alternative algorithms, cost-sensitive learning, and enhanced feature engineering could further improve fairness and prediction balance.
+
+* Incorporating domain knowledge and additional data sources may help create a more robust and equitable model.
 
 ## Future Enhancements
 
