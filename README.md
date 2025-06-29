@@ -72,6 +72,21 @@ https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-datase
 
 ~Streamlit
 
+---
+
+## Limitations Found While Researching about the project!👇`(*>﹏<*)′
+
+While substantial effort has been invested in cleaning, preprocessing, modeling, and deploying this project, analysis reveals that the dataset is biased. Key biases include:
+
+* Gender imbalance (81% Male vs 19% Female)
+* Disproportionate credit history availability (84% have credit history)
+* Potential model favoring of certain demographics due to skewed training data
+
+As a result, although the model achieves decent accuracy, it may not be fully fair or generalisable to real-world scenarios.
+
+`A bias analysis notebook will be soon added to document and visualise these imbalances, along with suggestions to mitigate them in future iterations.
+
+
 ## Future Enhancements
 
 * Hyperparameter tuning with GridSearchCV
