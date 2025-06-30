@@ -5,7 +5,7 @@ It includes a two-part exploratory and modeling notebook as well as an user-frie
 
 ## Project Structure :- 
 
-| File / Folder                                       | Description                                              |
+| File                                        | Description                                              |
 |----------------------------------------------------|----------------------------------------------------------|
 | `Loan_Default_Prediction_using_Machine_Learning.ipynb`     | **Part 1**: Exploratory data analysis and preprocessing       |
 | `Loan_Default_Prediction_Using_Machine_Learning_Part_2.ipynb` | **Part 2**: Feature selection, model building, and evaluation |
