@@ -9,7 +9,7 @@ It includes a two-part exploratory and modeling notebook as well as an user-frie
 |----------------------------------------------------|----------------------------------------------------------|
 | `Loan_Default_Prediction_using_Machine_Learning.ipynb`     | **Part 1**: Exploratory data analysis and preprocessing       |
 | `Loan_Default_Prediction_Using_Machine_Learning_Part_2.ipynb` | **Part 2**: Feature selection, model building, and evaluation |
-|`Fairness_Evaluation_and_Bias_Mitigation_in_Loan_Default_Predicion`                    | Imbalance and Bias evaluation which were found in the dataset |
+|`Fairness_Evaluation_and_Bias_Mitigation_in_Loan_Default_Predicion`                    | Imbalance and Bias evaluation was done which were found in the dataset |
 |`loan_prediction_app.py`        | Streamlit-based web application for loan predictions      |
 |`loan_approval_model.pkl`                    | Trained model used in the app 
 |`loan_predictions.csv`                    | No of predictions made by the app is saved in the format of CSV files
