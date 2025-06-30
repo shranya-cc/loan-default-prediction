@@ -10,7 +10,7 @@ It includes a two-part exploratory and modeling notebook as well as an user-frie
 | `Loan_Default_Prediction_using_Machine_Learning.ipynb`     | **Part 1**: Exploratory data analysis and preprocessing       |
 | `Loan_Default_Prediction_Using_Machine_Learning_Part_2.ipynb` | **Part 2**: Feature selection, model building, and evaluation |
 |`loan_prediction_app.py`        | Streamlit-based web application for loan predictions      |
-|`loan_prediction_pipeline.pkl`                    | Trained model used in the app 
+|`loan_approval_model.pkl`                    | Trained model used in the app 
 |`loan_predictions.csv`                    | No of predictions made by the app is saved in the format of CSV files
 
 > The project is split across two notebooks for clarity and better observation
@@ -55,11 +55,11 @@ https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-datase
 
 ## ML Workflow 🎀
 
-. Data Cleaning and Imputation
-. Exploratory Data Analysis (EDA)
-. Feature Engineering and Encoding
-. Model Building (Logistic Regression, Decision Tree, Random Forest)
-. Evaluation (Accuracy, Confusion Matrix, Classification Report)
+- Data Cleaning and Imputation
+- Exploratory Data Analysis (EDA)
+- Feature Engineering and Encoding
+- Model Building (Logistic Regression, Decision Tree, Random Forest)
+- Evaluation (Accuracy, Confusion Matrix, Classification Report)
 
 
 ## Libraries and Tools Used :-
@@ -74,31 +74,37 @@ https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-datase
 
 ---
 
-## Limitations Found While Researching about the project!👇`(*>﹏<*)′
+## Limitations Found While Researching about the project! (Data Imbalance and Model Bias) 🌷
 
-While substantial effort has been invested in cleaning, preprocessing, modeling, and deploying this project, analysis reveals that the dataset is biased. Key biases include:
+The dataset used for this project exhibits a significant imbalance in the target variable distribution, with approximately 70% of loans labeled as "Rejected" and only about 30% as "Approved". This imbalance is common in loan approval datasets, as financial institutions tend to reject a majority of applications.
 
-* Gender imbalance (81% Male vs 19% Female)
-* Disproportionate credit history availability (84% have credit history)
-* Potential model favoring of certain demographics due to skewed training data
+## Impact on Model Performance:
 
-As a result, although the model achieves decent accuracy, it may not be fully fair or generalisable to real-world scenarios.
+- The model tends to predict the majority class ("Rejected") more often, leading to a skewed prediction distribution reflecting the dataset bias.
 
-`A bias analysis notebook will be soon added to document and visualise these imbalances, along with suggestions to mitigate them in future iterations.
+- Despite extensive efforts — including applying techniques such as SMOTE (Synthetic Minority Over-sampling Technique), hyperparameter tuning, different resampling strategies, and cost-sensitive learning — the imbalance remained challenging to fully overcome.
 
+- These efforts did not significantly improve the model's ability to accurately identify the minority class ("Approved"), resulting in lower sensitivity and limiting practical usefulness.
 
-## Future Enhancements
+- Accuracy alone is not a sufficient metric in this context, so evaluation metrics such as precision, recall, and F1-score were considered to better understand model performance.
 
-* Hyperparameter tuning with GridSearchCV
-* SHAP for model explainability
-* Web deployment on Streamlit cloud
-* Added input validation and improved UI styling
+## Additional Biases:
+
+- Gender imbalance (81% Male vs 19% Female) and credit history availability (84% have credit history) may introduce unintended demographic biases in predictions.
+
+- These imbalances suggest the model may favour certain groups over others, which is a critical consideration for fairness and ethical AI.
+
+## Bias Analysis Note 😉 
+
+A dedicated notebook has been added to perform detailed bias analysis on the dataset, including visualization of imbalances and mitigation strategies.
+
+---
 
 ## Author ✨
 
 Shranya Dutta
-*Data Analyst in Progress| Machine Learning Enthusiast*
+*Data Analyst in Progress| Machine Learning and Data Analysis Enthusiast*
 
-## License 
+## License 🧣
 This project is licensed under the MIT License.
 Feel free to use, modify, and share with proper attribution 
