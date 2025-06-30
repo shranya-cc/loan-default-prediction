@@ -55,11 +55,11 @@ https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-datase
 
 ## ML Workflow 🎀
 
-. Data Cleaning and Imputation
-. Exploratory Data Analysis (EDA)
-. Feature Engineering and Encoding
-. Model Building (Logistic Regression, Decision Tree, Random Forest)
-. Evaluation (Accuracy, Confusion Matrix, Classification Report)
+- Data Cleaning and Imputation
+- Exploratory Data Analysis (EDA)
+- Feature Engineering and Encoding
+- Model Building (Logistic Regression, Decision Tree, Random Forest)
+- Evaluation (Accuracy, Confusion Matrix, Classification Report)
 
 
 ## Libraries and Tools Used :-
@@ -74,46 +74,37 @@ https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-datase
 
 ---
 
-## Limitations Found While Researching about the project! (Data Imbalance and Model Bias)
+## Limitations Found While Researching about the project! (Data Imbalance and Model Bias) 🌷
 
-The dataset used for this project exhibits a significant imbalance in the target variable distribution, wit approximately 70% of loans labeled as "Rejected" and only about 30% as "Approved". This imbalance is common in loan approval datasets, as financial institutions tend to reject a majority of applications.
+The dataset used for this project exhibits a significant imbalance in the target variable distribution, with approximately 70% of loans labeled as "Rejected" and only about 30% as "Approved". This imbalance is common in loan approval datasets, as financial institutions tend to reject a majority of applications.
 
-~ Impact on Model Performance:
+## Impact on Model Performance:
 
-* The model tends to predict the majority class ("Rejected") more often, leading to a skewed prediction distribution reflecting the dataset bias.
+- The model tends to predict the majority class ("Rejected") more often, leading to a skewed prediction distribution reflecting the dataset bias.
 
-* Despite extensive efforts - including applying techniques such as SMOTE (Synthetic Minority Over-sampling Technique), hyperparameter tuning, different resampling strategies, and cost-effective learning - the imabalance remianed challenging to fully overcome.
+- Despite extensive efforts — including applying techniques such as SMOTE (Synthetic Minority Over-sampling Technique), hyperparameter tuning, different resampling strategies, and cost-sensitive learning — the imbalance remained challenging to fully overcome.
 
-* These efforts did not significantly improve the model's ability to accurately identify the minority class ("Approved"), resulting in lower sensitivity and limiting practical usefulness.
+- These efforts did not significantly improve the model's ability to accurately identify the minority class ("Approved"), resulting in lower sensitivity and limiting practical usefulness.
 
-* Accuracy alone is not a sufficient metric in this context, so evaluation metrics such as precision, recall, F1-score were considered to better understand model performance.
+- Accuracy alone is not a sufficient metric in this context, so evaluation metrics such as precision, recall, and F1-score were considered to better understand model performance.
 
-~ Additional Biases :-
+## Additional Biases:
 
-* Gender imbalance (81% Male vs 19% Female) and credit history availability (84% have credit history) may introduce unintended demographic biases in predictions.
+- Gender imbalance (81% Male vs 19% Female) and credit history availability (84% have credit history) may introduce unintended demographic biases in predictions.
 
-* These imbalances suggest the model may favour certain groups over others, which is a critical consideration for fairness and ethical AI.
+- These imbalances suggest the model may favour certain groups over others, which is a critical consideration for fairness and ethical AI.
 
-~ Future Work:
+## Bias Analysis Note 😉 
 
-* A dedicated bias analysis notebook will be added soon to visualise these imbalances and document mitigation strategies.
+A dedicated notebook has been added to perform detailed bias analysis on the dataset, including visualization of imbalances and mitigation strategies.
 
-* Exploring alternative algorithms, cost-sensitive learning, and enhanced feature engineering could further improve fairness and prediction balance.
-
-* Incorporating domain knowledge and additional data sources may help create a more robust and equitable model.
-
-## Future Enhancements
-
-* Hyperparameter tuning with GridSearchCV
-* SHAP for model explainability
-* Web deployment on Streamlit cloud
-* Added input validation and improved UI styling
+---
 
 ## Author ✨
 
 Shranya Dutta
 *Data Analyst in Progress| Machine Learning and Data Analysis Enthusiast*
 
-## License 
+## License 🧣
 This project is licensed under the MIT License.
 Feel free to use, modify, and share with proper attribution 
