@@ -7,9 +7,10 @@ It includes a two-part exploratory and modeling notebook as well as an user-frie
 
 | File                                        | Description                                              |
 |----------------------------------------------------|----------------------------------------------------------|
-| `Loan_Default_Prediction_using_Machine_Learning.ipynb`     | **Part 1**: Exploratory data analysis and preprocessing       |
-| `Loan_Default_Prediction_Using_Machine_Learning_Part_2.ipynb` | **Part 2**: Feature selection, model building, and evaluation |
+| `Loan_Default_Prediction_using_Machine_Learning.ipynb`     | **Part 1**: Exploratory data analysis and preprocessing, feature engineering, outliers detection, categorical encoding, train_test_split + Modeling Phase, Feature Scaling, Training Logistic Regression Model|
+| `Loan_Default_Prediction_Using_Machine_Learning_Part_2.ipynb` | **Part 2**: HyperParameter tuning, cross validation checking, feature selection, SHAP for explainability |
 |`Fairness_Evaluation_and_Bias_Mitigation_in_Loan_Default_Predicion`                    | Imbalance and Bias evaluation was done which were found in the dataset |
+|`BiasAnalysisFile.pbix`                    |  Power BI file added for detailed bias visualization and interactive analysis
 |`loan_prediction_app.py`        | Streamlit-based web application for loan predictions      |
 |`loan_approval_model.pkl`                    | Trained model used in the app 
 |`loan_predictions.csv`                    | No of predictions made by the app is saved in the format of CSV files
@@ -33,6 +34,8 @@ To assist financial institutions in identifying high-risk loan applicants by:
 - Interactive prediction interface using Streamlit
 - Visual insights from data distribution and correlations
 - Multiple machine learning models compared for accuracy
+- A dedicated Bias Analysis notebook for analysing the biased dataset
+- Power BI report for bias analysis visualization and exploration
 
 ## How to Run This App? 💫
 
@@ -61,6 +64,7 @@ https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-datase
 - Feature Engineering and Encoding
 - Model Building (Logistic Regression, Decision Tree, Random Forest)
 - Evaluation (Accuracy, Confusion Matrix, Classification Report)
+- Hyperparameter tuning, Cross Val Check, SHAP
 
 
 ## Libraries and Tools Used :-
@@ -72,6 +76,8 @@ https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-datase
 ~Jupyter Notebook
 
 ~Streamlit
+
+~Power BI
 
 ---
 
@@ -97,7 +103,7 @@ The dataset used for this project exhibits a significant imbalance in the target
 
 ## Bias Analysis Note 😉 
 
-A dedicated notebook has been added to perform detailed bias analysis on the dataset, including visualization of imbalances and mitigation strategies.
+A dedicated notebook and a Power BI file have been added to perform detailed bias analysis on the dataset, including visualization of imbalances and mitigation strategies for interactive exploration
 
 ---
 
